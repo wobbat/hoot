@@ -1,0 +1,8 @@
+@group core
+@group dev
+
+@package neovim-git
+:config nvim -> ~/.config/nvim 
+
+@package starship
+:config starship/psyduck.toml -> ~/.config/starship.toml

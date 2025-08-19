@@ -1,0 +1,5 @@
+*.lock
+managed.lock
+owl.lock
+
+.state

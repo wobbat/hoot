@@ -1,0 +1,15 @@
+@package fish
+:config fish -> ~/.config/fish
+
+@package starship
+:config starship/default.toml -> ~/.config/starship.toml
+
+@packages
+eza
+dtrx
+zoxide
+vi
+fzf
+wget
+unzip
+ripgrep

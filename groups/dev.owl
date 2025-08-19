@@ -1,0 +1,7 @@
+@packages
+nodejs
+bun-bin
+go
+zig
+git 
+ssh

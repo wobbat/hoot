@@ -1,0 +1,14 @@
+@package hyprland
+:config hyprland -> ~/.config/hypr
+
+@package  rofi-wayland
+:config rofi-wl-lr -> `/.config/rofi
+
+@packages
+wl-clipboard
+grim
+slurp
+wf-recorder
+swaybg
+waybar
+xdg-desktop-portal-hyprland

@@ -1,0 +1,3 @@
+# Example wayland config
+[output]
+name=HDMI-A-1

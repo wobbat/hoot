@@ -1,0 +1,33 @@
+# ~/.config/starship.toml
+
+# Main prompt format
+format = """
+$time $directory
+$character
+"""
+
+# Right side of the prompt
+right_format = ""
+
+# Whether to insert a blank line before the prompt
+# add_newline = false
+
+[character]
+success_symbol = "[:](bold yellow)[:](bold red)[:](bold green)[:](bold purple)[:](bold blue)"
+error_symbol   = "[:](bold red)[:](bold red)[:](bold red)[:](bold red)[:](bold red)"
+
+[aws]
+disabled = true
+
+[time]
+disabled    = false
+format      = "[$time](white bold)"
+time_format = "%H:%M"
+
+[directory]
+style = "white bold"
+
+# Example to disable package module (commented out)
+# [package]
+# disabled = true
+
