@@ -4,7 +4,6 @@ bun-bin
 go
 zig
 git 
-ssh
 
 @package neovim-git
 :config nvim -> ~/.config/nvim 
