@@ -1,0 +1,4 @@
+@package wezterm
+:config wezterm -> ~/.config/wezterm
+
+@package ttf-jetbrains-mono

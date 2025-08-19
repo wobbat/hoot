@@ -1,4 +1,4 @@
 @group core
 @group dev
 @group wayland
-
+@group desktop
