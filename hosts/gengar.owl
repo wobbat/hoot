@@ -2,3 +2,6 @@
 @group dev
 @group wayland
 @group desktop
+
+
+@package ghostty
