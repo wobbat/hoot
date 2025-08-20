@@ -2,7 +2,7 @@
 :config hyprland -> ~/.config/hypr
 
 @package  rofi-wayland
-:config rofi-wl-lr -> `/.config/rofi
+:config rofi-wl-lr -> ~/.config/rofi
 
 @packages
 wl-clipboard

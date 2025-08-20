@@ -1,0 +1,12 @@
+@package xorg-xinit
+:config xinit/xinitrc -> ~/.xinitrc
+
+@package awesome
+:config awesome -> ~/.config/awesome
+
+@package  rofi
+:config rofi-wl-lr -> ~/.config/rofi
+
+@packages
+picom
+xorg
