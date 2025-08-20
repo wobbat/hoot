@@ -13,7 +13,7 @@ if status is-interactive
 
     # Skip Wayland vars on specific hosts
     set -l host (cat /etc/hostname)
-    if test "$host" != "fawkes"; and test "$host" != "iris"
+    if test "$host" != "fawkes"; and test "$host" != "mew"
         set -gx MOZ_ENABLE_WAYLAND 1
         set -gx OZONE_PLATFORM wayland
     end
@@ -40,6 +40,7 @@ if status is-interactive
     # alias xt3 'exiftool -Model="RICOH GR III" -UniqueCameraModel="RICOH GR III" -T -ext dng .'
     # alias 3tx 'exiftool -Model="RICOH GR IIIx" -UniqueCameraModel="RICOH GR IIIx" -T -ext dng .'
     alias vim "nvim"
+    alias hostname "cat /etc/hostname"
     alias n "nvim"
     alias backlight "sudo light -s sysfs/backlight/intel_backlight -S"
     alias sbm 'cat ~/_/bookmarks/bookmarks.txt | fzf --border=rounded --prompt="Search Bookmarks > "  --bind="enter:execute-silent(xdg-open {-1})+abort" --preview="echo {-1}"  --preview-window="up,1" --color=16 --layout=reverse'
@@ -63,14 +64,22 @@ if status is-interactive
     # Vi keybindings
     fish_vi_key_bindings
 
-    # Autostart Hyprland on TTY1 local login on Linux, not inside SSH and not under an existing display
-    if test (uname) = "Linux"
-        and test -z "$SSH_CONNECTION"
-        and test -z "$DISPLAY"
-        and test -z "$WAYLAND_DISPLAY"
-        and test (basename (tty)) = "tty1"
-        exec Hyprland
+    # Autostart Hyprland or startx on TTY1 local login
+if test (uname) = "Linux"
+    and test -z "$SSH_CONNECTION"
+    and test (basename (tty)) = "tty1"
+    if test (hostname) = "mew"
+        # Only guard against X already running
+        if test -z "$DISPLAY"
+            exec startx
+        end
+    else
+        # Guard against both X and Wayland already running
+        if test -z "$DISPLAY" -a -z "$WAYLAND_DISPLAY"
+            exec Hyprland
+        end
     end
+end
 
     # opam init (safe to remove if not needed)
     if test -r "$HOME/.opam/opam-init/init.fish"
