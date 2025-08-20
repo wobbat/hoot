@@ -8,4 +8,3 @@ git
 @package neovim-git
 :config nvim -> ~/.config/nvim 
 
-

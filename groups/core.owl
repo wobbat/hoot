@@ -13,3 +13,4 @@ fzf
 wget
 unzip
 ripgrep
+fd

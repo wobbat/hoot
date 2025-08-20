@@ -40,7 +40,6 @@ if status is-interactive
     # alias xt3 'exiftool -Model="RICOH GR III" -UniqueCameraModel="RICOH GR III" -T -ext dng .'
     # alias 3tx 'exiftool -Model="RICOH GR IIIx" -UniqueCameraModel="RICOH GR IIIx" -T -ext dng .'
     alias vim "nvim"
-    alias hostname "cat /etc/hostname"
     alias n "nvim"
     alias backlight "sudo light -s sysfs/backlight/intel_backlight -S"
     alias sbm 'cat ~/_/bookmarks/bookmarks.txt | fzf --border=rounded --prompt="Search Bookmarks > "  --bind="enter:execute-silent(xdg-open {-1})+abort" --preview="echo {-1}"  --preview-window="up,1" --color=16 --layout=reverse'
@@ -68,7 +67,7 @@ if status is-interactive
 if test (uname) = "Linux"
     and test -z "$SSH_CONNECTION"
     and test (basename (tty)) = "tty1"
-    if test (hostname) = "mew"
+    if test (cat /etc/hostname) = "mew"
         # Only guard against X already running
         if test -z "$DISPLAY"
             exec startx
