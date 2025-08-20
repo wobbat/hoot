@@ -1,0 +1,7 @@
+@group core
+@group dev
+@group x11
+@group desktop
+
+
+@package ghostty
