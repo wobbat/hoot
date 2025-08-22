@@ -2,3 +2,5 @@
 :config wezterm -> ~/.config/wezterm
 
 @package ttf-jetbrains-mono
+
+@package zen-browser-bin

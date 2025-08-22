@@ -25,6 +25,7 @@ if status is-interactive
         fish_add_path $HOME/go/bin
         fish_add_path $HOME/.local/npm-global/bin
         fish_add_path $HOME/.bun/bin
+        [ -f ~/.owl/env.fish ] && source ~/.owl/env.fish
     case Darwin
         if type -q /opt/homebrew/bin/brew
             eval (/opt/homebrew/bin/brew shellenv)
