@@ -37,4 +37,7 @@ vim.api.nvim_set_hl(0, "WinSeparator", {
     bold = true
 })
 
-vim.opt.fillchars:append{vert = " "} -- or "┃", "▌"
+vim.opt.fillchars:append { vert = " " } -- or "┃", "▌"
+
+vim.opt.background = "dark"             -- set this to dark or light
+vim.cmd.colorscheme "oxocarbon"
