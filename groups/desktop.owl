@@ -4,3 +4,6 @@
 @package ttf-jetbrains-mono
 
 @package zen-browser-bin
+
+@package tailscale
+:service tailscaled
