@@ -1,4 +1,4 @@
-vim.cmd('colorscheme milkyway')
+vim.cmd('colorscheme dim')
 -- line numbers
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -40,4 +40,4 @@ vim.api.nvim_set_hl(0, "WinSeparator", {
 vim.opt.fillchars:append { vert = " " } -- or "┃", "▌"
 
 vim.opt.background = "dark"             -- set this to dark or light
-vim.cmd.colorscheme "oxocarbon"
+vim.cmd.colorscheme "dim"
