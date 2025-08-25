@@ -3,3 +3,5 @@ managed.lock
 owl.lock
 
 .state
+env.fish
+env.sh
