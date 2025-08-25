@@ -12,3 +12,10 @@ wf-recorder
 swaybg
 waybar
 xdg-desktop-portal-hyprland
+
+@env XDG_SESSION_TYPE=wayland
+@env WINIT_UNIX_BACKEND=wayland
+@env WEZTERM_BACKEND=wayland
+@env QT_QPA_PLATFORM=wayland
+@env GDK_BACKEND=wayland
+
