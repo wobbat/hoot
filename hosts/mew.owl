@@ -2,6 +2,8 @@
 @group dev
 @group x11
 @group desktop
-
+@group vm
+@group sec
+@group wh
 
 @package ghostty
