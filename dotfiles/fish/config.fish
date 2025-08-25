@@ -8,7 +8,7 @@ if status is-interactive
     set fish_greeting ""
 
     # Core env
-    set -gx GOPATH $HOME/go
+    set -gx GOPATH $HOME/.go
     set -gx EDITOR nvim
 
     # Skip Wayland vars on specific hosts
