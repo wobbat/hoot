@@ -33,12 +33,12 @@ configuration {
   margin: 0;
   padding: 0;
   spacing: 0;
-  cursor: #05080f;
-  bg: #05080f;
-  bg-alt: #05080f;
-  fg: #c2c8d1;
-  selected: #e79214;
-  fg-alt: #4a5568;
+   cursor: #000000;
+   bg: #000000;
+   bg-alt: #000000;
+   fg: #f7f8f2;
+   selected: #ffb365;
+   fg-alt: #86817e;
 
   background-color: @bg;
   text-color: @fg;
