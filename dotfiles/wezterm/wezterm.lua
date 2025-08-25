@@ -170,4 +170,9 @@ config.color_scheme = 'Gooey (Gogh)'
 config.color_scheme = 'Ef-Cherie'
 config.color_scheme = 'City Streets (terminal.sexy)'
 config.color_scheme = 'Pulp (terminal.sexy)'
+config.default_cursor_style = "BlinkingBlock"
+config.colors = {
+    cursor_bg = "white", -- the cursor itself
+    cursor_fg = "black", -- text under the cursor
+}
 return config
