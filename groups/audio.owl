@@ -1,0 +1,11 @@
+@package pulseaudio
+
+@package pulseaudio-alsa
+@package alsa-utils
+@package alsa-lib
+
+@packages
+sof-firmware
+alsa-ucm-conf
+
+@package pavucontrol

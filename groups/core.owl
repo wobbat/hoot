@@ -4,6 +4,9 @@
 @package starship
 :config starship/default.toml -> ~/.config/starship.toml
 
+@package ghostty
+:config ghostty -> ~/.config/ghostty/
+
 @packages
 eza
 dtrx
