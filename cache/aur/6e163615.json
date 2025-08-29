@@ -1,0 +1,11 @@
+{
+  "response": {
+    "error": "Query arg too small.",
+    "resultcount": 0,
+    "results": [],
+    "type": "error",
+    "version": 5
+  },
+  "timestamp": "2025-08-27T17:46:27.836Z",
+  "url": "https://aur.archlinux.org/rpc/?v=5&type=search&arg="
+}

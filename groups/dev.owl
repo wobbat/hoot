@@ -9,3 +9,7 @@ git
 :config nvim -> ~/.config/nvim 
 
 @package helix
+
+@package openssh
+
+@package visual-studio-code-bin

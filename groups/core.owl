@@ -18,3 +18,9 @@ unzip
 ripgrep
 fd
 ouch
+
+@package xclip
+
+@package light
+
+@package htop

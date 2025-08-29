@@ -1,0 +1,10 @@
+{
+  "response": {
+    "resultcount": 0,
+    "results": [],
+    "type": "search",
+    "version": 5
+  },
+  "timestamp": "2025-08-28T20:40:58.948Z",
+  "url": "https://aur.archlinux.org/rpc/?v=5&type=search&arg=tmux%20git"
+}

@@ -1,0 +1,11 @@
+{
+  "response": {
+    "error": "Too many package results.",
+    "resultcount": 0,
+    "results": [],
+    "type": "error",
+    "version": 5
+  },
+  "timestamp": "2025-08-28T20:41:11.063Z",
+  "url": "https://aur.archlinux.org/rpc/?v=5&type=search&arg=git"
+}

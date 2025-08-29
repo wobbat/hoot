@@ -1,0 +1,58 @@
+{
+  "response": {
+    "resultcount": 1,
+    "results": [
+      {
+        "CoMaintainers": [
+          "NextWorks"
+        ],
+        "Conflicts": [
+          "zen-browser"
+        ],
+        "Depends": [
+          "gtk3",
+          "libxt",
+          "mime-types",
+          "dbus-glib",
+          "nss",
+          "ttf-font",
+          "systemd"
+        ],
+        "Description": "Performance oriented Firefox-based web browser",
+        "FirstSubmitted": 1722341490,
+        "ID": 1814813,
+        "Keywords": [],
+        "LastModified": 1756298119,
+        "License": [
+          "MPL-2.0"
+        ],
+        "Maintainer": "Larvey",
+        "Name": "zen-browser-bin",
+        "NumVotes": 206,
+        "OptDepends": [
+          "ffmpeg",
+          "networkmanager",
+          "libnotify",
+          "pulse-native-provider",
+          "speech-dispatcher",
+          "hunspell-en_US"
+        ],
+        "OutOfDate": null,
+        "PackageBase": "zen-browser-bin",
+        "PackageBaseID": 208536,
+        "Popularity": 35.470306,
+        "Provides": [
+          "zen-browser=1.15b"
+        ],
+        "Submitter": "ptr1337",
+        "URL": "https://github.com/zen-browser/desktop",
+        "URLPath": "/cgit/aur.git/snapshot/zen-browser-bin.tar.gz",
+        "Version": "1.15b-1"
+      }
+    ],
+    "type": "multiinfo",
+    "version": 5
+  },
+  "timestamp": "2025-08-28T17:03:31.993Z",
+  "url": "https://aur.archlinux.org/rpc/?v=5&type=info&arg[]=zen-browser-bin"
+}

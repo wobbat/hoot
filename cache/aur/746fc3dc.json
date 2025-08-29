@@ -1,0 +1,51 @@
+{
+  "response": {
+    "resultcount": 1,
+    "results": [
+      {
+        "Depends": [
+          "pacman>6.1",
+          "git"
+        ],
+        "Description": "Yet another yogurt. Pacman wrapper and AUR helper written in go.",
+        "FirstSubmitted": 1475688004,
+        "ID": 1711796,
+        "Keywords": [
+          "arm",
+          "AUR",
+          "go",
+          "helper",
+          "pacman",
+          "wrapper",
+          "x86"
+        ],
+        "LastModified": 1745485574,
+        "License": [
+          "GPL-3.0-or-later"
+        ],
+        "Maintainer": "jguer",
+        "MakeDepends": [
+          "go>=1.21"
+        ],
+        "Name": "yay",
+        "NumVotes": 2400,
+        "OptDepends": [
+          "sudo",
+          "doas"
+        ],
+        "OutOfDate": null,
+        "PackageBase": "yay",
+        "PackageBaseID": 115973,
+        "Popularity": 31.883079,
+        "Submitter": "jguer",
+        "URL": "https://github.com/Jguer/yay",
+        "URLPath": "/cgit/aur.git/snapshot/yay.tar.gz",
+        "Version": "12.5.0-1"
+      }
+    ],
+    "type": "multiinfo",
+    "version": 5
+  },
+  "timestamp": "2025-08-27T17:52:37.136Z",
+  "url": "https://aur.archlinux.org/rpc/?v=5&type=info&arg[]=yay"
+}
