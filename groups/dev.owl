@@ -13,3 +13,27 @@ git
 @package openssh
 
 @package visual-studio-code-bin
+
+@package lazygit
+
+@package rustup
+
+@package crystal
+
+@package shards
+
+@package dfmt
+
+@package dmd
+
+@package dub
+
+@package dcd
+
+@package ldc
+
+@package musl
+
+@package ninja
+
+@package cmake

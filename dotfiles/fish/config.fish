@@ -26,6 +26,7 @@ if status is-interactive
         fish_add_path $HOME/.local/npm-global/bin
         fish_add_path $HOME/.local/bin
         fish_add_path $HOME/.bun/bin
+        fish_add_path $HOME/.nimble/bin
         [ -f ~/.owl/env.fish ] && source ~/.owl/env.fish
     case Darwin
         if type -q /opt/homebrew/bin/brew
@@ -53,6 +54,7 @@ if status is-interactive
     alias tm "tmux new -As0"
     alias tmc "tmux new -Ascode"
     alias nos "sudo nixos-rebuild switch --flake /home/wobbat/.wobble"
+
 
     # Prompt and directory jumper if present
     if type -q starship

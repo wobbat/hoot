@@ -1,4 +1,5 @@
 -- line numbers
+-- test
 vim.opt.nu = true
 vim.opt.relativenumber = true
 -- Formatting
@@ -40,3 +41,12 @@ vim.opt.fillchars:append { vert = " " } -- or "┃", "▌"
 
 vim.opt.background = "dark"             -- set this to dark or light
 vim.cmd('colorscheme pulpish')
+
+
+-- Add local bun bin to PATH for LSPs
+local bun_local_bin = vim.fn.getcwd() .. "~/.bun/bin"
+if vim.fn.isdirectory(bun_local_bin) == 1 then
+    if not string.find(vim.env.PATH or "", bun_local_bin, 1, true) then
+        vim.env.PATH = bun_local_bin .. ":" .. vim.env.PATH
+    end
+end

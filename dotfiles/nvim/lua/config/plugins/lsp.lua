@@ -5,24 +5,24 @@ return {
         'williamboman/mason.nvim',
         lazy = false, -- load at startup so `require('mason')` is available
         build = ':MasonUpdate'
-    }, -- 2) Bridge Mason → lspconfig
+    },                -- 2) Bridge Mason → lspconfig
     {
         'williamboman/mason-lspconfig.nvim',
-        dependencies = {'williamboman/mason.nvim'}
+        dependencies = { 'williamboman/mason.nvim' }
     }, -- 3) blink.cmp for ultra-fast fuzzy completion
     {
         'saghen/blink.cmp',
         version = '1.*',
-        dependencies = {'rafamadriz/friendly-snippets'},
+        dependencies = { 'rafamadriz/friendly-snippets' },
         opts = {
-            keymap = {preset = 'default'},
-            appearance = {nerd_font_variant = 'mono'},
-            completion = {documentation = {auto_show = false}},
-            sources = {default = {'lsp', 'path', 'snippets', 'buffer'}},
-            fuzzy = {implementation = 'prefer_rust_with_warning'}
+            keymap = { preset = 'default' },
+            appearance = { nerd_font_variant = 'mono' },
+            completion = { documentation = { auto_show = false } },
+            sources = { default = { 'lsp', 'path', 'snippets', 'buffer' } },
+            fuzzy = { implementation = 'prefer_rust_with_warning' }
         }
     }, -- 4) Lua-Dev for enhanced Lua LSP
-    {'folke/lua-dev.nvim', ft = 'lua'},
+    { 'folke/lua-dev.nvim', ft = 'lua' },
 
     -- 5) nvim-lspconfig with Mason, blink.cmp & lua-dev integration
     {
@@ -39,29 +39,29 @@ return {
             local on_attach = function(client, bufnr)
                 local function buf_map(mode, lhs, rhs, desc)
                     vim.keymap.set(mode, lhs, rhs,
-                                   {buffer = bufnr, silent = true, desc = desc})
+                        { buffer = bufnr, silent = true, desc = desc })
                 end
 
                 -- navigation & actions
                 buf_map('n', 'gd', vim.lsp.buf.definition,
-                        'LSP: Go to Definition')
+                    'LSP: Go to Definition')
                 buf_map('n', 'gD', vim.lsp.buf.declaration,
-                        'LSP: Go to Declaration')
+                    'LSP: Go to Declaration')
                 buf_map('n', 'gi', vim.lsp.buf.implementation,
-                        'LSP: Go to Implementation')
+                    'LSP: Go to Implementation')
                 buf_map('n', 'gr', vim.lsp.buf.references,
-                        'LSP: Show References')
+                    'LSP: Show References')
                 buf_map('n', 'K', vim.lsp.buf.hover, 'LSP: Hover Documentation')
                 buf_map('n', '<leader>rn', vim.lsp.buf.rename,
-                        'LSP: Rename Symbol')
+                    'LSP: Rename Symbol')
                 buf_map('n', '<leader>ca', vim.lsp.buf.code_action,
-                        'LSP: Code Action')
+                    'LSP: Code Action')
                 buf_map('n', '<leader>sd', vim.diagnostic.open_float,
-                        'LSP: Show Diagnostics')
+                    'LSP: Show Diagnostics')
                 buf_map('n', '[d', vim.diagnostic.goto_prev,
-                        'LSP: Prev Diagnostic')
+                    'LSP: Prev Diagnostic')
                 buf_map('n', ']d', vim.diagnostic.goto_next,
-                        'LSP: Next Diagnostic')
+                    'LSP: Next Diagnostic')
 
                 -- manual format
                 -- buf_map('n', '<leader>`', function() vim.lsp.buf.format { async = true } end, 'LSP: Format Buffer')
@@ -69,13 +69,13 @@ return {
                 -- auto-format on save
                 if client.server_capabilities.documentFormattingProvider then
                     local group = vim.api.nvim_create_augroup('LspFormat' ..
-                                                                  bufnr,
-                                                              {clear = true})
+                        bufnr,
+                        { clear = true })
                     vim.api.nvim_create_autocmd('BufWritePre', {
                         group = group,
                         buffer = bufnr,
                         callback = function()
-                            vim.lsp.buf.format {async = false}
+                            vim.lsp.buf.format { async = false }
                         end
                     })
                 end
@@ -86,7 +86,7 @@ return {
 
             -- Mason-LSPConfig v2: ensure & handler table
             require('mason-lspconfig').setup {
-                ensure_installed = {'lua_ls', 'rust_analyzer', 'gopls'},
+                ensure_installed = { 'lua_ls', 'nimlangserver', 'ts_ls', 'rust_analyzer', 'gopls' },
                 automatic_installation = true, -- install if missing
                 handlers = {
                     -- default handler for all servers except lua_ls
@@ -110,13 +110,13 @@ return {
                                             },
                                             diagnostics = {
                                                 -- tell the server that `vim` is a defined global
-                                                globals = {"vim"}
+                                                globals = { "vim" }
                                             },
                                             workspace = {
                                                 -- make the server aware of Neovim runtime files
                                                 library = vim.api
                                                     .nvim_get_runtime_file("",
-                                                                           true),
+                                                        true),
                                                 checkThirdParty = false -- suppress prompt for checking third-party libs
                                             }
                                         }
