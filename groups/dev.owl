@@ -37,3 +37,5 @@ git
 @package ninja
 
 @package cmake
+
+@package hare

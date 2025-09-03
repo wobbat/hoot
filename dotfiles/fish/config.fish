@@ -53,6 +53,8 @@ if status is-interactive
     alias ls "eza --group-directories-first"
     alias tm "tmux new -As0"
     alias tmc "tmux new -Ascode"
+    alias car "cargo run"
+    alias cr "cargo run -q"
     alias nos "sudo nixos-rebuild switch --flake /home/wobbat/.wobble"
 
 
