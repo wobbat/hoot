@@ -19,28 +19,54 @@ window-padding-x = 20
 window-padding-y = 10
 
 # Color scheme (Pulp theme)
-background = #000000
+background = #111111
 foreground = #ffffff
 cursor-color = #ffffff
 
 # Color palette
-palette = 0=#86817e
-palette = 1=#d75756
-palette = 2=#688c7d
-palette = 3=#ffb365
-palette = 4=#68778c
-palette = 5=#fdb3b2
-palette = 6=#86abd9
-palette = 7=#f7f8f2
-palette = 8=#86817e
-palette = 9=#a63a3a
-palette = 10=#688c7d
-palette = 11=#ffb365
-palette = 12=#68778c
-palette = 13=#8c686a
-palette = 14=#86abd9
-palette = 15=#f7f8f2
-cursor-text = black
+#palette = 0=#86817e
+#palette = 1=#d75756
+#palette = 2=#688c7d
+#palette = 3=#ffb365
+#palette = 4=#68778c
+#palette = 5=#fdb3b2
+#palette = 6=#86abd9
+#palette = 7=#f7f8f2
+#palette = 8=#86817e
+#palette = 9=#a63a3a
+#palette = 10=#688c7d
+#palette = 11=#ffb365
+#palette = 12=#68778c
+#palette = 13=#8c686a
+##palette = 14=#86abd9
+#palette = 15=#f7f8f2
+#cursor-text = black
+
+
+cursor-text = black  
+
+background = #151515
+foreground = #E1E1E1
+cursor-color = #D0D0D0
+cursor-text = #151515
+
+palette = 0=#373737
+palette = 1=#b46958
+palette = 2=#88afa2
+palette = 3=#F4BF75
+palette = 4=#BAD7FF
+palette = 5=#AA759F
+palette = 6=#7E97AB
+palette = 7=#E1E1E1
+
+palette = 8=#727272
+palette = 9=#984936
+palette = 10=#88afa2
+palette = 11=#FFA557
+palette = 12=#A2B5C1
+palette = 13=#AA749F
+palette = 14=#88afa2
+palette = 15=#AFAFAF
 
 # Font features (disable ligatures like Wezterm)
 font-feature = -liga

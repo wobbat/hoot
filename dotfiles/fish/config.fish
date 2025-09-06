@@ -1,5 +1,4 @@
 # ~/.config/fish/config.fish
-# my custom dotfiles
 # Only run in interactive shells
 if status is-interactive
     # Colors and greeting
@@ -55,6 +54,7 @@ if status is-interactive
     alias tmc "tmux new -Ascode"
     alias car "cargo run"
     alias cr "cargo run -q"
+    alias sd "sudo-rs"
     alias nos "sudo nixos-rebuild switch --flake /home/wobbat/.wobble"
 
 

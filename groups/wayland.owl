@@ -1,7 +1,7 @@
 @package hyprland
 :config hyprland -> ~/.config/hypr
 
-@package  rofi-wayland
+@package rofi
 :config rofi-wl-lr -> ~/.config/rofi
 
 @packages

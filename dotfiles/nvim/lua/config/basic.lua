@@ -41,6 +41,7 @@ vim.opt.fillchars:append { vert = " " } -- or "┃", "▌"
 
 vim.opt.background = "dark"             -- set this to dark or light
 vim.cmd('colorscheme pulpish')
+vim.cmd('colorscheme no-clown-fiesta')
 
 
 -- Add local bun bin to PATH for LSPs

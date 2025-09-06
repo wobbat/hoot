@@ -8,6 +8,7 @@
 :config rofi-wl-lr -> ~/.config/rofi
 
 @packages
+python-pip
 picom
 xorg
 xclip

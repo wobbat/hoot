@@ -1,13 +1,13 @@
-@package fish
+@pkg fish
 :config fish -> ~/.config/fish
 
-@package starship
+@pkg starship
 :config starship/default.toml -> ~/.config/starship.toml
 
-@package ghostty
+@pkg ghostty
 :config ghostty -> ~/.config/ghostty/
 
-@packages
+@pkgs
 eza
 dtrx
 zoxide
@@ -18,9 +18,6 @@ unzip
 ripgrep
 fd
 ouch
-
-@package xclip
-
-@package light
-
-@package htop
+xclip
+light
+htop

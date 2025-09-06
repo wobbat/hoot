@@ -1,5 +1,3 @@
-@package yay
-
-@package downgrade
-
-@package yay-debug
+@pkg yay
+@pkg downgrade
+@env EDITOR=nvim

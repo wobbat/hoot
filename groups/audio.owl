@@ -1,20 +1,20 @@
-@package pulseaudio
+@pkg pulseaudio
 
-@package pulseaudio-alsa
-@package pulseaudio-bluetooth
-@package alsa-utils
-@package alsa-lib
+@pkg pulseaudio-alsa
+@pkg pulseaudio-bluetooth
+@pkg alsa-utils
+@pkg alsa-lib
 
-@packages
+@pkgs
 sof-firmware
 alsa-ucm-conf
 
-@package pavucontrol
+@pkg pavucontrol
 
-@package bluetui
+@pkg bluetui
 
 
-@package bluez
+@pkg bluez
 :service bluetooth [ scope = system, enable = true, start = true ]
 
-@package bluez-utils
+@pkg bluez-utils
