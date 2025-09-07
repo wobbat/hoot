@@ -43,30 +43,30 @@ cursor-color = #ffffff
 #cursor-text = black
 
 
-cursor-text = black  
 
-background = #151515
-foreground = #E1E1E1
-cursor-color = #D0D0D0
-cursor-text = #151515
+background=#1a1a19
+foreground=#d1d1d1
+cursor-color=#b6b6b5
+cursor-text=#1a1a19
 
-palette = 0=#373737
-palette = 1=#b46958
-palette = 2=#88afa2
-palette = 3=#F4BF75
-palette = 4=#BAD7FF
-palette = 5=#AA759F
-palette = 6=#7E97AB
-palette = 7=#E1E1E1
+palette = 0=#333332
+palette = 1=#ff968c
+palette = 2=#61957f
+palette = 3=#ffc591
+palette = 4=#8db4d4
+palette = 5=#de9bc8
+palette = 6=#7bb099
+palette = 7=#d1d1d1
 
-palette = 8=#727272
-palette = 9=#984936
-palette = 10=#88afa2
-palette = 11=#FFA557
-palette = 12=#A2B5C1
-palette = 13=#AA749F
-palette = 14=#88afa2
-palette = 15=#AFAFAF
+palette = 8=#4c4c4b
+palette = 9=#ffafa5
+palette = 10=#7aae98
+palette = 11=#ffdeaa
+palette = 12=#a6cded
+palette = 13=#f7b4e1
+palette = 14=#94c9b2
+palette = 15=#eaeaea
+
 
 # Font features (disable ligatures like Wezterm)
 font-feature = -liga
