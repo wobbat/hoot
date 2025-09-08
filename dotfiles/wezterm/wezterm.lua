@@ -1,8 +1,5 @@
 local wezterm = require 'wezterm'
 
--- Pull in the wezterm API
-local wezterm = require 'wezterm'
-
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
@@ -10,7 +7,7 @@ config.warn_about_missing_glyphs = false
 
 config.font = wezterm.font('JetBrains Mono', { weight = 'Bold' })
 config.font = wezterm.font('Inconsolata', { weight = 'Bold' })
-config.font = wezterm.font('TX-02', { weight = 'Bold' })
+config.font = wezterm.font('TX-02')
 config.font_size = 15.0
 config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
@@ -171,6 +168,7 @@ config.color_scheme = 'Gooey (Gogh)'
 config.color_scheme = 'Ef-Cherie'
 config.color_scheme = 'City Streets (terminal.sexy)'
 config.color_scheme = 'Pulp (terminal.sexy)'
+config.color_scheme = 'terafox'
 config.default_cursor_style = "BlinkingBlock"
 config.colors = {
     cursor_bg = "white", -- the cursor itself

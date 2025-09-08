@@ -1,1 +1,1 @@
-return { "kvrohit/rasmus.nvim" }
+return { "EdenEast/nightfox.nvim" }

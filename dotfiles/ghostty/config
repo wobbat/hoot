@@ -5,70 +5,21 @@ font-family = TX-02
 font-size = 15
 font-style-bold = bold
 
-# Tab bar settings (GTK-specific)
-gtk-tabs-location = bottom
-gtk-wide-tabs = false
 gtk-single-instance = false
 
 # Cursor settings
 cursor-style = block
-cursor-style-blink = true
+cursor-style-blink = false
+
+cursor-invert-fg-bg = true
 
 # Window padding
 window-padding-x = 20
 window-padding-y = 10
 
-# Color scheme (Pulp theme)
-background = #111111
-foreground = #ffffff
-cursor-color = #ffffff
+theme = terafox
 
-# Color palette
-#palette = 0=#86817e
-#palette = 1=#d75756
-#palette = 2=#688c7d
-#palette = 3=#ffb365
-#palette = 4=#68778c
-#palette = 5=#fdb3b2
-#palette = 6=#86abd9
-#palette = 7=#f7f8f2
-#palette = 8=#86817e
-#palette = 9=#a63a3a
-#palette = 10=#688c7d
-#palette = 11=#ffb365
-#palette = 12=#68778c
-#palette = 13=#8c686a
-##palette = 14=#86abd9
-#palette = 15=#f7f8f2
-#cursor-text = black
-
-
-
-background=#1a1a19
-foreground=#d1d1d1
-cursor-color=#b6b6b5
-cursor-text=#1a1a19
-
-palette = 0=#333332
-palette = 1=#ff968c
-palette = 2=#61957f
-palette = 3=#ffc591
-palette = 4=#8db4d4
-palette = 5=#de9bc8
-palette = 6=#7bb099
-palette = 7=#d1d1d1
-
-palette = 8=#4c4c4b
-palette = 9=#ffafa5
-palette = 10=#7aae98
-palette = 11=#ffdeaa
-palette = 12=#a6cded
-palette = 13=#f7b4e1
-palette = 14=#94c9b2
-palette = 15=#eaeaea
-
-
-# Font features (disable ligatures like Wezterm)
-font-feature = -liga
-font-feature = -calt
-font-feature = -clig
+resize-overlay = never
+confirm-close-surface = false
+link-url = true
+clipboard-trim-trailing-spaces = true
