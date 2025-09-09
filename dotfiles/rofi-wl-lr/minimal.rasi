@@ -28,21 +28,21 @@ configuration {
   }
 }
 
-* {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  spacing: 0;
-   cursor: #000000;
-   bg: #000000;
-   bg-alt: #000000;
-   fg: #f7f8f2;
-   selected: #ffb365;
-   fg-alt: #86817e;
+ * {
+   border: 0;
+   margin: 0;
+   padding: 0;
+   spacing: 0;
+    cursor: #e6eaea;
+    bg: #152528;
+    bg-alt: #1d3337;
+    fg: #e6eaea;
+    selected: #fda47f;
+    fg-alt: #587b7b;
 
-  background-color: @bg;
-  text-color: @fg;
-}
+   background-color: @bg;
+   text-color: @fg;
+ }
 
 window {
     fullscreen: true;

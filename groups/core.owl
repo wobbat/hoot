@@ -7,8 +7,12 @@
 @pkg ghostty
 :config ghostty -> ~/.config/ghostty/
 
+@pkg tmux
+:config tmux -> ~/.config/tmux
+
 @pkgs
 eza
+bat
 dtrx
 zoxide
 vi

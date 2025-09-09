@@ -10,6 +10,7 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.list = true
 
+
 -- pretty whitespace and git chars
 vim.opt.listchars = {
     space = " ",
