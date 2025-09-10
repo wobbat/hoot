@@ -1,4 +1,4 @@
-picom --vsync --fade-in-step=1 --fade-out-step=1 &
+#picom --vsync --fade-in-step=1 --fade-out-step=1 &
 #setxkbmap -option caps:escape &
 
 export XCURSOR_SIZE=24
@@ -12,8 +12,11 @@ else
     xrandr --output eDP-1 --auto --output DP-1 --off
 fi
 
+if [ -x /usr/bin/vmware-user ]; then
+    /usr/bin/vmware-user &
+fi
+
 export XDG_SESSION_TYPE=x11
-vmware-user &
 
 awesome
 

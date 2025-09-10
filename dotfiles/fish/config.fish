@@ -7,9 +7,9 @@ if status is-interactive
     set fish_greeting ""
 
     # Source modular config files
-    source ~/.config/fish/env.fish
     source ~/.config/fish/paths.fish
     source ~/.config/fish/aliases.fish
     source ~/.config/fish/plugins.fish
     source ~/.config/fish/startup.fish
+    source ~/.owl/env.fish
 end
