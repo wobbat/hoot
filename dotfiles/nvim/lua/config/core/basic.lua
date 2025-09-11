@@ -41,16 +41,16 @@ vim.api.nvim_set_hl(0, "WinSeparator", {
 vim.opt.fillchars:append { vert = " " } -- or "┃", "▌"
 
 vim.opt.background = "dark"             -- set this to dark or light
-vim.cmd('colorscheme pulpish')
-vim.cmd('colorscheme terafox')
 --vim.cmd('colorscheme rasmus')
 --vim.cmd('colorscheme dim')
 
 
 -- Add local bun bin to PATH for LSPs
-local bun_local_bin = vim.fn.getcwd() .. "~/.bun/bin"
+local bun_local_bin = vim.fn.expand("~/.bun/bin")
 if vim.fn.isdirectory(bun_local_bin) == 1 then
     if not string.find(vim.env.PATH or "", bun_local_bin, 1, true) then
         vim.env.PATH = bun_local_bin .. ":" .. vim.env.PATH
     end
 end
+
+vim.highlight.priorities.semantic_tokens = 95

@@ -40,9 +40,20 @@ return {
                 local function buf_map(mode, lhs, rhs, desc)
                     vim.keymap.set(mode, lhs, rhs,
                         { buffer = bufnr, silent = true, desc = desc })
-                end
+                 end
 
-                -- navigation & actions
+                 -- disable semantic tokens and other features for rust only
+                 if client.name == "rust_analyzer" then
+                     pcall(vim.lsp.semantic_tokens.stop, bufnr)
+                     client.server_capabilities.semanticTokensProvider = nil
+                     client.server_capabilities.documentHighlightProvider = false
+                     -- disable inlay hints if available
+                     if client.server_capabilities.inlayHintProvider then
+                         client.server_capabilities.inlayHintProvider = false
+                     end
+                 end
+
+                 -- navigation & actions
                 buf_map('n', 'gd', vim.lsp.buf.definition,
                     'LSP: Go to Definition')
                 buf_map('n', 'gD', vim.lsp.buf.declaration,
@@ -89,13 +100,31 @@ return {
                 ensure_installed = { 'lua_ls', 'nimlangserver', 'ts_ls', 'rust_analyzer', 'gopls' },
                 automatic_installation = true, -- install if missing
                 handlers = {
-                    -- default handler for all servers except lua_ls
-                    function(server_name)
-                        require('lspconfig')[server_name].setup {
-                            on_attach = on_attach,
-                            capabilities = capabilities
-                        }
-                    end,
+                     -- default handler for all servers except lua_ls and rust_analyzer
+                     function(server_name)
+                         require('lspconfig')[server_name].setup {
+                             on_attach = on_attach,
+                             capabilities = capabilities
+                         }
+                     end,
+                     -- special case for rust_analyzer
+                     rust_analyzer = function()
+                         -- create deep copy of capabilities
+                         local rust_capabilities = vim.deepcopy(capabilities)
+                         -- remove semantic tokens capability
+                         rust_capabilities.textDocument = rust_capabilities.textDocument or {}
+                         rust_capabilities.textDocument.semanticTokens = nil
+
+                         require('lspconfig').rust_analyzer.setup {
+                             on_attach = on_attach,
+                             capabilities = rust_capabilities,
+                             handlers = {
+                                 ["textDocument/semanticTokens/full"] = function() end,
+                                 ["textDocument/semanticTokens/range"] = function() end
+                             }
+                         }
+                     end,
+
                     -- override for lua_ls using lua-dev
                     lua_ls = function()
                         local luadev_opts =

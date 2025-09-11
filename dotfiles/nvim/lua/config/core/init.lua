@@ -1,11 +1,6 @@
--- Core configs
 require('config.core.keymap')
 require('config.core.basic')
 require('config.core.commands')
 require('config.core.format')
 require('config.core.fileman')
 require('config.core.whopy')
-
-
-
-require('config.core.lazy')

@@ -7,7 +7,6 @@ vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zz")
 -- vim.keymap.set("n", "<leader>ftb", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", { noremap = true })
 -- Better redo
 vim.keymap.set("n", "U", "<C-r>")
-vim.keymap.set("n", "U", "<C-r>")
 
 -- LEADER stuff
 vim.g.mapleader = " "
@@ -20,10 +19,7 @@ vim.api.nvim_set_keymap('n', '<leader>do',
 vim.api.nvim_set_keymap('n', '<Leader>qf', ':copen<CR>',
     { noremap = true, silent = true })
 
--- Ctrl-w t to toggle Neo-tree
-vim.keymap.set('n', '<C-w>t', function()
-    require('neo-tree.command').execute({ toggle = true })
-end, { silent = true, desc = 'Neo-tree: Toggle File Explorer' })
+
 
 -- lsp?
 -- Global LSP keymaps
