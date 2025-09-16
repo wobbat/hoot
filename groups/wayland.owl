@@ -9,7 +9,7 @@
 :cfg hyprland/terafox.conf -> ~/.config/hypr/theme.conf
 
 @pkg rofi
-:cfg rofi-wl-lr -> ~/.config/rofi
+:cfg rofi/tera -> ~/.config/rofi
 
 @pkgs
 grim
