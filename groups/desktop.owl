@@ -1,12 +1,10 @@
-@package wezterm
-:config wezterm -> ~/.config/wezterm
+@group fonts
+@group media
 
-@package ttf-jetbrains-mono
+@pkg wezterm
+:cfg wezterm -> ~/.config/wezterm
 
-@package zen-twilight-bin
-@package zen-browser-bin
-
-@package tailscale
-:service tailscaled
-
-@package nemo
+@pkgs
+thunar
+zen-browser-bin
+zen-twilight-bin

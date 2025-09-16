@@ -1,0 +1,162 @@
+// Minimal UI Zellij config
+
+// Plugins removed - using built-in actions instead
+
+// Disable pane frames for cleaner look
+pane_frames false
+
+// Use simplified UI without arrow fonts
+simplified_ui true
+
+// Disable advanced mouse actions
+advanced_mouse_actions false
+
+// Disable mouse mode
+mouse_mode false
+
+// Use custom layout with zjstatus
+
+// Terafox theme to match nightfox
+themes {
+    terafox {
+        fg 230 234 234
+        bg 21 37 40
+        red 232 92 81
+        green 122 164 161
+        yellow 253 164 127
+        blue 90 147 170
+        magenta 173 92 124
+        orange 255 131 73
+        cyan 161 205 216
+        black 47 50 57
+        white 235 235 235
+        text_unselected {
+            base 230 234 234
+            background 21 37 40
+            emphasis_0 253 164 127
+            emphasis_1 90 147 170
+            emphasis_2 122 164 161
+            emphasis_3 232 92 81
+        }
+    }
+}
+
+theme "terafox"
+
+// Keybindings with Super as primary modifier
+keybinds {
+    shared {
+        // Tab switching (create tabs manually with Shift+Super+number if needed)
+        bind "Super 1" { GoToTab 1; }
+        bind "Super 2" { GoToTab 2; }
+        bind "Super 3" { GoToTab 3; }
+        bind "Super 4" { GoToTab 4; }
+        bind "Super 5" { GoToTab 5; }
+        bind "Super 6" { GoToTab 6; }
+        bind "Super 7" { GoToTab 7; }
+        bind "Super 8" { GoToTab 8; }
+        bind "Super 9" { GoToTab 9; }
+        bind "Super 0" { GoToTab 10; }
+        
+        // Tab creation shortcuts (Shift+Super+number creates and goes to tab)
+        bind "Shift Super 1" { NewTab; }
+        bind "Shift Super 2" { NewTab; }
+        bind "Shift Super 3" { NewTab; }
+        bind "Shift Super 4" { NewTab; }
+        bind "Shift Super 5" { NewTab; }
+        bind "Shift Super 6" { NewTab; }
+        bind "Shift Super 7" { NewTab; }
+        bind "Shift Super 8" { NewTab; }
+        bind "Shift Super 9" { NewTab; }
+        bind "Shift Super 0" { NewTab; }
+    }
+    shared_except "locked" {
+        bind "Super g" { SwitchToMode "Locked"; }
+        bind "Super q" { Quit; }
+        bind "Super Ctrl f" { ToggleFloatingPanes; }
+        bind "Super Ctrl n" { NewPane; }
+        bind "Super Shift j" { NewPane "Down"; }
+        bind "Super Shift k" { NewPane "stacked"; }
+        bind "Super Shift l" { NewPane "Right"; }
+        bind "Super h" { MoveFocus "Left"; }
+        bind "Super j" { MoveFocus "Down"; }
+        bind "Super k" { MoveFocus "Up"; }
+        bind "Super l" { MoveFocus "Right"; }
+        bind "Ctrl t" { NewTab; }
+        bind "Super Ctrl i" { MoveTab "Left"; }
+        bind "Super Ctrl o" { MoveTab "Right"; }
+        bind "Super Ctrl h" "Super Ctrl Left" { MoveFocusOrTab "Left"; }
+        bind "Super Ctrl l" "Super Ctrl Right" { MoveFocusOrTab "Right"; }
+        bind "Super Ctrl j" "Super Ctrl Down" { MoveFocus "Down"; }
+        bind "Super Ctrl k" "Super Ctrl Up" { MoveFocus "Up"; }
+        bind "Super Ctrl =" "Super Ctrl +" { Resize "Increase"; }
+        bind "Super Ctrl -" { Resize "Decrease"; }
+        bind "Super Ctrl [" { PreviousSwapLayout; }
+        bind "Super Ctrl ]" { NextSwapLayout; }
+        bind "Super Ctrl p" { TogglePaneInGroup; }
+        bind "Super Ctrl Shift p" { ToggleGroupMarking; }
+
+    }
+    shared_except "normal" "locked" {
+        bind "Enter" "Esc" { SwitchToMode "Normal"; }
+    }
+    shared_except "pane" "locked" {
+        bind "Super p" { SwitchToMode "Pane"; }
+    }
+    shared_except "resize" "locked" {
+        bind "Super n" { SwitchToMode "Resize"; }
+    }
+    shared_except "scroll" "locked" {
+        bind "Super s" { SwitchToMode "Scroll"; }
+    }
+    shared_except "session" "locked" {
+        bind "Super o" { SwitchToMode "Session"; }
+    }
+    shared_except "tab" "locked" {
+        bind "Super t" { SwitchToMode "Tab"; }
+    }
+    shared_except "move" "locked" {
+        bind "Super m" { SwitchToMode "Move"; }
+    }
+    shared_except "tmux" "locked" {
+        bind "Super b" { SwitchToMode "Tmux"; }
+    }
+}
+
+// Additional default settings
+
+on_force_close "detach"
+
+auto_layout true
+
+session_serialization true
+
+serialize_pane_viewport false
+
+scrollback_lines_to_serialize 10000
+
+default_mode "normal"
+
+scroll_buffer_size 10000
+
+copy_clipboard "system"
+
+copy_on_select true
+
+scrollback_editor "$EDITOR"
+
+mirror_session false
+
+// default_layout uses layouts/default.kdl
+
+//theme_dir "/path/to/my/theme_dir"
+
+styled_underlines true
+
+disable_session_metadata false
+
+support_kitty_keyboard_protocol true
+
+stacked_resize true
+
+show_release_notes true

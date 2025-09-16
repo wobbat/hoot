@@ -1,0 +1,17 @@
+@group audio
+@group core
+@group desktop
+@group dev
+@group wayland
+
+@pkg ghostty
+:cfg ghostty/oled -> ~/.config/ghostty/config
+:cfg ghostty/main -> ~/.config/ghostty/main
+
+@pkg hyprland
+:cfg hyprland/hyprland.conf -> ~/.config/hypr/hyprland.conf
+:cfg hyprland/carbonfox.conf -> ~/.config/hypr/theme.conf
+
+@pkgs
+1password
+paru

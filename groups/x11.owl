@@ -1,16 +1,16 @@
-@package xorg-xinit
-:config xinit/xinitrc -> ~/.xinitrc
-
-@package awesome
-:config awesome -> ~/.config/awesome
-
-@package  rofi
-:config rofi-wl-lr -> ~/.config/rofi
-
-@packages
-python-pip
-picom
-xorg
-xclip
-
 @env XDG_SESSION_TYPE=x11
+
+@pkg awesome
+:cfg awesome -> ~/.config/awesome
+
+@pkg rofi
+:cfg rofi-wl-lr -> ~/.config/rofi
+
+@pkg xorg-xinit
+:cfg xinit/xinitrc -> ~/.xinitrc
+
+@pkgs
+picom
+python-pip
+xclip
+xorg

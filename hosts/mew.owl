@@ -1,9 +1,10 @@
 @group core
-@group dev
-@group x11
 @group desktop
-@group vm
+@group dev
 @group sec
+@group vm
 @group wh
+@group x11
 
-@package ghostty
+@pkgs
+ghostty

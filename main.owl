@@ -1,3 +1,5 @@
-@pkg yay
-@pkg downgrade
 @env EDITOR=nvim
+
+@pkgs
+downgrade
+yay

@@ -1,8 +1,19 @@
+@group audio
 @group core
+@group desktop
 @group dev
 @group wayland
-@group desktop
-@group audio
 
-@package 1password
-@package paru
+@pkg ghostty
+:cfg ghostty/tera -> ~/.config/ghostty/config
+:cfg ghostty/main -> ~/.config/ghostty/main
+
+@pkg wezterm
+:cfg wezterm/wayland -> ~/.config/wayland
+
+@pkg zellij
+:cfg zellij -> ~/.config/zellij
+
+@pkgs
+1password
+paru
