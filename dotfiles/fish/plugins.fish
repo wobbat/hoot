@@ -7,7 +7,7 @@ if type -q zoxide
 end
 
 # Vi keybindings
-fish_vi_key_bindings
+#fish_vi_key_bindings
 
 # opam init (safe to remove if not needed)
 if test -r "$HOME/.opam/opam-init/init.fish"

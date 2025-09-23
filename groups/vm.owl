@@ -1,2 +1,2 @@
-@package open-vm-tools
+@pkg open-vm-tools
 :service vmtoolsd

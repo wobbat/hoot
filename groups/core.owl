@@ -1,27 +1,31 @@
 @pkg fish
-:config fish -> ~/.config/fish
-
-@pkg starship
-:config starship/default.toml -> ~/.config/starship.toml
+:cfg fish -> ~/.config/fish
 
 @pkg ghostty
-:config ghostty -> ~/.config/ghostty/
+:cfg ghostty -> ~/.config/ghostty/
+
+@pkg starship
+:cfg starship/default.toml -> ~/.config/starship.toml
+
+@pkg tailscale
+:service tailscaled
 
 @pkg tmux
-:config tmux -> ~/.config/tmux
+:cfg tmux -> ~/.config/tmux
 
 @pkgs
-eza
 bat
 dtrx
-zoxide
-vi
-fzf
-wget
-unzip
-ripgrep
+eza
 fd
-ouch
-xclip
-light
+fzf
 htop
+light
+ouch
+ripgrep
+sudo-rs
+unzip
+vi
+wget
+xclip
+zoxide

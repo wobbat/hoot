@@ -1,15 +1,17 @@
+@pkg bluez
+:service bluetooth
+
 @pkgs
-pulseaudio
-pulseaudio-alsa
-pulseaudio-bluetooth
-alsa-utils
 alsa-lib
-sof-firmware
 alsa-ucm-conf
-pavucontrol
+alsa-utils
 bluetui
 bluez-utils
-
-@pkg bluez
-:service bluetooth [ scope = system, enable = true, start = true ]
-
+pavucontrol
+pipewire
+pipewire-alsa
+pipewire-audio
+pipewire-pulse
+sof-firmware
+wiremix
+wireplumber
