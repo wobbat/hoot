@@ -1,12 +1,11 @@
-@package wezterm
+@pkg wezterm
 :config wezterm -> ~/.config/wezterm
 
-@package ttf-jetbrains-mono
-
-@package zen-twilight-bin
-@package zen-browser-bin
-
-@package tailscale
+@pkg tailscale
 :service tailscaled
 
-@package nemo
+@pkgs
+ttf-jetbrains-mono
+zen-twilight-bin
+zen-browser-bin
+nemo
