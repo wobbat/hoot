@@ -4,7 +4,7 @@ return {
         opts = {
             options = {
                 icons_enabled = false,
-                theme = 'auto',
+                theme = 'pixel',
                 component_separators = { left = ' ', right = ' ' },
                 section_separators = { left = ' ', right = ' ' },
                 disabled_filetypes = { statusline = {}, winbar = {} },
@@ -16,17 +16,21 @@ return {
             sections = {
                 lualine_a = { 'mode' },
                 lualine_b = {
-                    'branch', {
-                    'diagnostics',
-                    cond = function()
-                        return _G.diagnostics_visible
-                    end
-                }
+                    -- 'branch',
+                    {
+                        'diagnostics',
+                        cond = function()
+                            return _G.diagnostics_visible
+                        end
+                    }
                 },
                 lualine_c = { 'filename' },
-                lualine_x = { '' },
-                lualine_y = { 'diff', 'filetype' },
-                lualine_z = { 'filename' }
+                lualine_x = { 'diff' },
+                lualine_y = {
+                    --    'diff',
+                    'diff'
+                },
+                lualine_z = { 'location' }
             },
             inactive_sections = {
                 lualine_a = {},
