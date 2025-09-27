@@ -12,6 +12,9 @@
 :cfg hyprland/hyprland.conf -> ~/.config/hypr/hyprland.conf
 :cfg hyprland/carbonfox.conf -> ~/.config/hypr/theme.conf
 
+@pkg rofi
+:cfg rofi/carbon -> ~/.config/rofi/
+
 @pkgs
 1password
 paru

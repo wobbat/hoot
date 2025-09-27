@@ -1,15 +1,15 @@
+@env QT_QPA_PLATFORM=wayland
 @env WEZTERM_BACKEND=wayland
 @env XDG_SESSION_TYPE=wayland
 @env GDK_BACKEND=wayland
 @env WINIT_UNIX_BACKEND=wayland
-@env QT_QPA_PLATFORM=wayland
 
 @pkg hyprland
 :cfg hyprland/hyprland.conf -> ~/.config/hypr/hyprland.conf
 :cfg hyprland/iceberg.conf -> ~/.config/hypr/theme.conf
 
 @pkg rofi
-:cfg rofi-wl-lr -> ~/.config/rofi
+:cfg rofi/tera -> ~/.config/rofi
 
 @pkgs
 grim

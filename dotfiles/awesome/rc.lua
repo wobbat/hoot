@@ -237,7 +237,7 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             -- wibox.widget.systray(),
-           -- battery_widget,
+            -- battery_widget,
             bat_widget,
             separator_widget,
             mytextclock,
@@ -279,7 +279,7 @@ globalkeys = gears.table.join(
         { description = "focus previous by index", group = "client" }
     ),
     --awful.key({ modkey, }, "w", function() mymainmenu:show() end,
-     --   { description = "show main menu", group = "awesome" }),
+    --   { description = "show main menu", group = "awesome" }),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift" }, "j", function() awful.client.swap.byidx(1) end,
@@ -314,7 +314,7 @@ globalkeys = gears.table.join(
         { description = "open a terminal", group = "launcher" }),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
         { description = "reload awesome", group = "awesome" }),
-    awful.key({ modkey, "Shift" }, "k", awesome.quit,
+    awful.key({ modkey, "Shift" }, "p", awesome.quit,
         { description = "quit awesome", group = "awesome" }),
     awful.key({ modkey, }, "l", function() awful.tag.incmwfact(0.05) end,
         { description = "increase master width factor", group = "layout" }),
@@ -341,7 +341,7 @@ clientkeys = gears.table.join(
             c:raise()
         end,
         { description = "toggle fullscreen", group = "client" }),
-    awful.key({ modkey, }, "v", function(c) c:kill() end,
+    awful.key({ modkey, }, "z", function(c) c:kill() end,
         { description = "close", group = "client" }),
     awful.key({ modkey, "Control" }, "space", awful.client.floating.toggle,
         { description = "toggle floating", group = "client" }),
