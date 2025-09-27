@@ -6,7 +6,7 @@
 
 @pkg hyprland
 :cfg hyprland/hyprland.conf -> ~/.config/hypr/hyprland.conf
-:cfg hyprland/terafox.conf -> ~/.config/hypr/theme.conf
+:cfg hyprland/iceberg.conf -> ~/.config/hypr/theme.conf
 
 @pkg rofi
 :cfg rofi-wl-lr -> ~/.config/rofi

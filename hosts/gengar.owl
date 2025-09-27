@@ -5,7 +5,7 @@
 @group wayland
 
 @pkg ghostty
-:cfg ghostty/tera -> ~/.config/ghostty/config
+:cfg ghostty/iceberg -> ~/.config/ghostty/config
 :cfg ghostty/main -> ~/.config/ghostty/main
 
 @pkg wezterm
