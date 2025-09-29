@@ -12,3 +12,5 @@ require("lazy").setup({
     spec = "config.plugins",
     change_detection = { notify = false }
 })
+
+vim.cmd[[colorscheme icbrg]]

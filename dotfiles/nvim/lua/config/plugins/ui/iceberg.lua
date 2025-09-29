@@ -1,1 +1,0 @@
-return { "oahlen/iceberg.nvim" }

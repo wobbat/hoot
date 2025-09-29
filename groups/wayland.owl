@@ -9,7 +9,7 @@
 :cfg hyprland/iceberg.conf -> ~/.config/hypr/theme.conf
 
 @pkg rofi
-:cfg rofi/tera -> ~/.config/rofi
+:cfg rofi/iceberg -> ~/.config/rofi
 
 @pkgs
 grim
