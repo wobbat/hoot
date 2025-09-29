@@ -1,4 +1,4 @@
-picom --vsync --fade-in-step=1 --fade-out-step=1 &
+#picom --vsync --fade-in-step=1 --fade-out-step=1 &
 #setxkbmap -option caps:escape &
 
 export XCURSOR_SIZE=24

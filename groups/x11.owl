@@ -14,3 +14,4 @@ xorg
 xclip
 
 @env XDG_SESSION_TYPE=x11
+@env WEZTERM_FRONT_END=Software

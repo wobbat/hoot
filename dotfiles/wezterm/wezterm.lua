@@ -1,8 +1,5 @@
 local wezterm = require 'wezterm'
 
--- Pull in the wezterm API
-local wezterm = require 'wezterm'
-
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
@@ -20,7 +17,6 @@ config.animation_fps = 30
 config.hide_tab_bar_if_only_one_tab = true
 config.show_new_tab_button_in_tab_bar = false
 config.enable_wayland = os.getenv("HOSTNAME") ~= "mew"
-config.front_end = "WebGpu"
 
 config.window_padding = {
     left = '2cell',
@@ -162,14 +158,6 @@ config.colors = {
     },
 }
     --]]
-config.color_scheme = 'carbonfox'
-config.color_scheme = 'Mono (terminal.sexy)'
-config.color_scheme = 'tokyonight_night'
-config.color_scheme = 'Grayscale (dark) (terminal.sexy)'
-config.color_scheme = 'Lost Woods (terminal.sexy)'
-config.color_scheme = 'Gooey (Gogh)'
-config.color_scheme = 'Ef-Cherie'
-config.color_scheme = 'City Streets (terminal.sexy)'
 config.color_scheme = 'Pulp (terminal.sexy)'
 config.default_cursor_style = "BlinkingBlock"
 config.colors = {
