@@ -1,35 +1,36 @@
 ---------------------------
--- Default awesome theme -- 
+-- Default awesome theme --
 ---------------------------
 
 local theme_assets = require("beautiful.theme_assets")
 local xresources   = require("beautiful.xresources")
 local dpi          = xresources.apply_dpi
 
+local gears        = require("gears")
 local gfs          = require("gears.filesystem")
 local themes_path  = gfs.get_themes_dir()
 
 local theme        = {}
 
-theme.font         = "JetBrains Mono Bold 12"
+theme.font         = "TX-02 12"
 
-theme.bg_normal    = "#000000"
-theme.bg_focus     = "#000000"
-theme.bg_urgent    = "#ff0000"
-theme.bg_minimize  = "#444444"
+theme.bg_normal    = "#152528"
+theme.bg_focus     = "#254147"
+theme.bg_urgent    = "#e85c51"
+theme.bg_minimize  = "#1d3337"
 theme.bg_systray   = theme.bg_normal
 
-theme.fg_normal    = "#606060"
-theme.fg_focus     = "#ab8652"
-theme.fg_urgent    = "#ffffff"
-theme.fg_minimize  = "#ffffff"
+theme.fg_normal    = "#e6eaea"
+theme.fg_focus     = "#eaeeee"
+theme.fg_urgent    = "#ebebeb"
+theme.fg_minimize  = "#ebebeb"
 
 
 theme.useless_gap                               = dpi(16)
 theme.border_width                              = dpi(8)
-theme.border_normal                             = "#000000"
-theme.border_focus                              = "#101010"
-theme.border_marked                             = "#91231c"
+theme.border_normal                             = "#152528"
+theme.border_focus                              = "#2d4f56"
+theme.border_marked                             = "#e85c51"
 
 -- There are other variable sets
 -- overriding the default one when
@@ -53,17 +54,41 @@ theme.taglist_squares_unsel                     = theme_assets.taglist_squares_u
     taglist_square_size, theme.fg_normal
 )
 
+-- Taglist colors
+theme.taglist_bg_focus                          = "#425e5e"
+theme.taglist_fg_focus                          = "#eaeeee"
+theme.taglist_bg_occupied                       = "#1d3337"
+theme.taglist_fg_occupied                       = "#e6eaea"
+theme.taglist_bg_empty                          = "#152528"
+theme.taglist_fg_empty                          = "#587b7b"
+
+-- Tasklist colors
+theme.tasklist_bg_focus                         = "#293e40"
+theme.tasklist_fg_focus                         = "#eaeeee"
+theme.tasklist_bg_urgent                        = "#e85c51"
+theme.tasklist_fg_urgent                        = "#ebebeb"
+
 -- Variables set for theming notifications:
 -- notification_font
 -- notification_[bg|fg]
 -- notification_[width|height|margin]
 -- notification_[border_color|border_width|shape|opacity]
+theme.notification_bg                           = "#152528"
+theme.notification_fg                           = "#e6eaea"
+theme.notification_border_color                 = "#2d4f56"
+theme.notification_border_width                 = dpi(2)
 
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
 theme.menu_height                               = dpi(100)
 theme.menu_width                                = dpi(100)
+theme.menu_bg_normal                            = "#152528"
+theme.menu_fg_normal                            = "#e6eaea"
+theme.menu_bg_focus                             = "#293e40"
+theme.menu_fg_focus                             = "#eaeeee"
+theme.menu_border_color                         = "#2d4f56"
+theme.menu_border_width                         = dpi(2)
 
 -- You can add as many variables as
 -- you wish and access them by using
@@ -97,7 +122,9 @@ theme.titlebar_maximized_button_focus_inactive  = themes_path .. "default/titleb
 theme.titlebar_maximized_button_normal_active   = themes_path .. "default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active    = themes_path .. "default/titlebar/maximized_focus_active.png"
 
---theme.wallpaper                                 = themes_path .. "default/background.png"
+theme.wallpaper = function(s)
+    gears.wallpaper.set(theme.bg_normal)
+end
 
 -- You can use your own layout icons like this:
 theme.layout_fairh                              = themes_path .. "default/layouts/fairhw.png"

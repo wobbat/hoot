@@ -1,0 +1,24 @@
+# Ghostty configuration to match Wezterm settings
+
+# Font settings
+font-family = TX-02
+font-size = 15
+font-style-bold = bold
+
+gtk-single-instance = false
+
+# Cursor settings
+cursor-style = block
+cursor-style-blink = false
+
+cursor-invert-fg-bg = true
+
+# Window padding
+window-padding-x = 20
+window-padding-y = 10
+
+
+resize-overlay = never
+confirm-close-surface = false
+link-url = true
+clipboard-trim-trailing-spaces = true

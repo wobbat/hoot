@@ -1,21 +1,21 @@
-@package hyprland
-:config hyprland -> ~/.config/hypr
+@env QT_QPA_PLATFORM=wayland
+@env WEZTERM_BACKEND=wayland
+@env XDG_SESSION_TYPE=wayland
+@env GDK_BACKEND=wayland
+@env WINIT_UNIX_BACKEND=wayland
 
-@package rofi
-:config rofi-wl-lr -> ~/.config/rofi
+@pkg hyprland
+:cfg hyprland/hyprland.conf -> ~/.config/hypr/hyprland.conf
+:cfg hyprland/iceberg.conf -> ~/.config/hypr/theme.conf
 
-@packages
-wl-clipboard
+@pkg rofi
+:cfg rofi/iceberg -> ~/.config/rofi
+
+@pkgs
 grim
 slurp
-wf-recorder
 swaybg
 waybar
+wf-recorder
+wl-clipboard
 xdg-desktop-portal-hyprland
-
-@env XDG_SESSION_TYPE=wayland
-@env WINIT_UNIX_BACKEND=wayland
-@env WEZTERM_BACKEND=wayland
-@env QT_QPA_PLATFORM=wayland
-@env GDK_BACKEND=wayland
-

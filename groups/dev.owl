@@ -1,41 +1,28 @@
-@packages
-nodejs
+@pkg neovim-git
+:cfg nvim -> ~/.config/nvim
+
+@pkgs
 bun-bin
+cmake
+crystal
+dcd
+dfmt
+dmd
+dub
+dune
+git
 go
+hare
+helix
+lazygit
+ldc
+musl
+ninja
+nodejs
+ocaml
+opam
+openssh
+rustup
+shards
+visual-studio-code-bin
 zig
-git 
-
-@package neovim-git
-:config nvim -> ~/.config/nvim 
-
-@package helix
-
-@package openssh
-
-@package visual-studio-code-bin
-
-@package lazygit
-
-@package rustup
-
-@package crystal
-
-@package shards
-
-@package dfmt
-
-@package dmd
-
-@package dub
-
-@package dcd
-
-@package ldc
-
-@package musl
-
-@package ninja
-
-@package cmake
-
-@package hare
