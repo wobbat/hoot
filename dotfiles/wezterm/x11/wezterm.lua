@@ -158,11 +158,32 @@ config.colors = {
     },
 }
     --]]
-config.color_scheme = 'Pulp (terminal.sexy)'
-config.color_scheme = 'terafox'
-config.default_cursor_style = "BlinkingBlock"
 config.colors = {
-    cursor_bg = "white", -- the cursor itself
-    cursor_fg = "black", -- text under the cursor
+    foreground = "#c6c8d1",
+    background = "#161821",
+    cursor_bg = "#c6c8d1",
+    cursor_fg = "#161821",
+    selection_bg = "#c6c8d1",
+    selection_fg = "#161821",
+    ansi = {
+        "#1e2132", -- 0
+        "#e27878", -- 1
+        "#b4be82", -- 2
+        "#e2a478", -- 3
+        "#84a0c6", -- 4
+        "#a093c7", -- 5
+        "#89b8c2", -- 6
+        "#c6c8d1", -- 7
+    },
+    brights = {
+        "#6b7089", -- 8
+        "#e98989", -- 9
+        "#c0ca8e", -- 10
+        "#e9b189", -- 11
+        "#91acd1", -- 12
+        "#ada0d3", -- 13
+        "#95c4ce", -- 14
+        "#d2d4de", -- 15
+    },
 }
 return config
