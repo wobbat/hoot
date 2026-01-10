@@ -17,6 +17,5 @@ if [ -x /usr/bin/vmware-user ]; then
 fi
 
 export XDG_SESSION_TYPE=x11
-
 awesome
 

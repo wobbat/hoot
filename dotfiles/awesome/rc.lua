@@ -341,7 +341,7 @@ clientkeys = gears.table.join(
             c:raise()
         end,
         { description = "toggle fullscreen", group = "client" }),
-    awful.key({ modkey, }, "z", function(c) c:kill() end,
+    awful.key({ modkey, }, "q", function(c) c:kill() end,
         { description = "close", group = "client" }),
     awful.key({ modkey, "Control" }, "space", awful.client.floating.toggle,
         { description = "toggle floating", group = "client" }),
@@ -387,7 +387,7 @@ local tag_keys = {
 }
 
 for i, keys in ipairs(tag_keys) do
-    for _, key in ipairs({ keys.number, keys.letter }) do
+    for _, key in ipairs({ keys.number }) do
         globalkeys = gears.table.join(globalkeys,
             -- View tag only.
             awful.key({ modkey }, key,

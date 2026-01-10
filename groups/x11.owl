@@ -5,10 +5,13 @@
 :cfg awesome -> ~/.config/awesome
 
 @pkg rofi
-:cfg rofi-wl-lr -> ~/.config/rofi
+:cfg rofi/iceberg -> ~/.config/rofi
 
 @pkg xorg-xinit
 :cfg xinit/xinitrc -> ~/.xinitrc
+
+@pkg wezterm
+:cfg wezterm/x11 -> ~/.config/wezterm 
 
 @pkgs
 picom

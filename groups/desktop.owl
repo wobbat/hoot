@@ -1,9 +1,6 @@
 @group fonts
 @group media
 
-@pkg wezterm
-:cfg wezterm -> ~/.config/wezterm
-
 @pkgs
 thunar
 zen-browser-bin

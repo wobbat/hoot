@@ -14,23 +14,23 @@ local theme        = {}
 
 theme.font         = "TX-02 12"
 
-theme.bg_normal    = "#152528"
-theme.bg_focus     = "#254147"
-theme.bg_urgent    = "#e85c51"
-theme.bg_minimize  = "#1d3337"
+theme.bg_normal    = "#161821"
+theme.bg_focus     = "#6b7089"
+theme.bg_urgent    = "#e27878"
+theme.bg_minimize  = "#1e2132"
 theme.bg_systray   = theme.bg_normal
 
-theme.fg_normal    = "#e6eaea"
-theme.fg_focus     = "#eaeeee"
-theme.fg_urgent    = "#ebebeb"
-theme.fg_minimize  = "#ebebeb"
+theme.fg_normal    = "#c6c8d1"
+theme.fg_focus     = "#d2d4de"
+theme.fg_urgent    = "#c6c8d1"
+theme.fg_minimize  = "#c6c8d1"
 
 
 theme.useless_gap                               = dpi(16)
 theme.border_width                              = dpi(8)
-theme.border_normal                             = "#152528"
-theme.border_focus                              = "#2d4f56"
-theme.border_marked                             = "#e85c51"
+theme.border_normal                             = "#161821"
+theme.border_focus                              = "#84a0c6"
+theme.border_marked                             = "#e27878"
 
 -- There are other variable sets
 -- overriding the default one when
@@ -55,27 +55,27 @@ theme.taglist_squares_unsel                     = theme_assets.taglist_squares_u
 )
 
 -- Taglist colors
-theme.taglist_bg_focus                          = "#425e5e"
-theme.taglist_fg_focus                          = "#eaeeee"
-theme.taglist_bg_occupied                       = "#1d3337"
-theme.taglist_fg_occupied                       = "#e6eaea"
-theme.taglist_bg_empty                          = "#152528"
-theme.taglist_fg_empty                          = "#587b7b"
+theme.taglist_bg_focus                          = "#84a0c6"
+theme.taglist_fg_focus                          = "#d2d4de"
+theme.taglist_bg_occupied                       = "#6b7089"
+theme.taglist_fg_occupied                       = "#c6c8d1"
+theme.taglist_bg_empty                          = "#161821"
+theme.taglist_fg_empty                          = "#6b7089"
 
 -- Tasklist colors
-theme.tasklist_bg_focus                         = "#293e40"
-theme.tasklist_fg_focus                         = "#eaeeee"
-theme.tasklist_bg_urgent                        = "#e85c51"
-theme.tasklist_fg_urgent                        = "#ebebeb"
+theme.tasklist_bg_focus                         = "#6b7089"
+theme.tasklist_fg_focus                         = "#d2d4de"
+theme.tasklist_bg_urgent                        = "#e27878"
+theme.tasklist_fg_urgent                        = "#c6c8d1"
 
 -- Variables set for theming notifications:
 -- notification_font
 -- notification_[bg|fg]
 -- notification_[width|height|margin]
 -- notification_[border_color|border_width|shape|opacity]
-theme.notification_bg                           = "#152528"
-theme.notification_fg                           = "#e6eaea"
-theme.notification_border_color                 = "#2d4f56"
+theme.notification_bg                           = "#161821"
+theme.notification_fg                           = "#c6c8d1"
+theme.notification_border_color                 = "#84a0c6"
 theme.notification_border_width                 = dpi(2)
 
 -- Variables set for theming the menu:
@@ -83,11 +83,11 @@ theme.notification_border_width                 = dpi(2)
 -- menu_[border_color|border_width]
 theme.menu_height                               = dpi(100)
 theme.menu_width                                = dpi(100)
-theme.menu_bg_normal                            = "#152528"
-theme.menu_fg_normal                            = "#e6eaea"
-theme.menu_bg_focus                             = "#293e40"
-theme.menu_fg_focus                             = "#eaeeee"
-theme.menu_border_color                         = "#2d4f56"
+theme.menu_bg_normal                            = "#161821"
+theme.menu_fg_normal                            = "#c6c8d1"
+theme.menu_bg_focus                             = "#6b7089"
+theme.menu_fg_focus                             = "#d2d4de"
+theme.menu_border_color                         = "#84a0c6"
 theme.menu_border_width                         = dpi(2)
 
 -- You can add as many variables as
@@ -122,7 +122,7 @@ theme.titlebar_maximized_button_focus_inactive  = themes_path .. "default/titleb
 theme.titlebar_maximized_button_normal_active   = themes_path .. "default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active    = themes_path .. "default/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = function(s)
+theme.wallpaper                                 = function(s)
     gears.wallpaper.set(theme.bg_normal)
 end
 
