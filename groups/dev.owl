@@ -13,7 +13,6 @@ dune
 git
 go
 hare
-helix
 lazygit
 ldc
 musl

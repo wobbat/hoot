@@ -1,4 +1,4 @@
-# Autostart Hyprland or startx on TTY1 local login
+# Autostart Hyprland or startx on TTY1 local login, niri on TTY2
 if test (uname) = "Linux"
     and test -z "$SSH_CONNECTION"
     and test (basename (tty)) = "tty1"
@@ -15,7 +15,17 @@ if test (uname) = "Linux"
                 set -x XDG_SESSION_TYPE wayland
                 set -x WINIT_UNIX_BACKEND wayland
                 set -x WEZTERM_BACKEND wayland
-                exec Hyprland
+                exec start-hyprland
             end
+    end
+end
+
+# Autostart niri on TTY2 local login
+if test (uname) = "Linux"
+    and test -z "$SSH_CONNECTION"
+    and test (basename (tty)) = "tty2"
+    # Guard against both X and Wayland already running
+    if test -z "$DISPLAY" -a -z "$WAYLAND_DISPLAY"
+        exec niri
     end
 end
