@@ -16,3 +16,15 @@ alias cr "cargo run -q"
 alias sd "sudo-rs"
 alias tm "tmux new -As0"
 alias tmc "tmux new -Ascode"
+
+
+# JJ
+alias jjsm "jj msc && jj git push"
+
+# Opencode
+alias ocdesk "git -C /home/wobbat/dev/opencode reset --hard && git -C /home/wobbat/dev/opencode pull && jq '.app.windows[0].decorations = false' /home/wobbat/dev/opencode/packages/desktop/src-tauri/tauri.conf.json > /home/wobbat/dev/opencode/packages/desktop/src-tauri/tauri.conf.json.tmp && mv /home/wobbat/dev/opencode/packages/desktop/src-tauri/tauri.conf.json.tmp /home/wobbat/dev/opencode/packages/desktop/src-tauri/tauri.conf.json && bun run --cwd /home/wobbat/dev/opencode/packages/desktop tauri dev"
+
+
+function jd
+    jj describe -m "$argv"
+end

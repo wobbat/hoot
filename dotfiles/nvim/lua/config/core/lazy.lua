@@ -13,4 +13,4 @@ require("lazy").setup({
     change_detection = { notify = false }
 })
 
-vim.cmd[[colorscheme icbrg]]
+vim.cmd [[colorscheme caret]]

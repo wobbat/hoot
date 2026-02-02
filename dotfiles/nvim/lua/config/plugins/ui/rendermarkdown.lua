@@ -52,7 +52,7 @@ return {
                 left_pad = 0,
                 right_pad = 0,
                 min_width = 0,
-                border = true,
+                border = false,
                 border_virtual = false,
                 border_prefix = false,
                 above = '▄',
@@ -73,103 +73,33 @@ return {
             -- 1) setup the plugin
             require('render-markdown').setup(opts)
 
-            -- 2) override the auto-generated groups with your hex colours
-            vim.api.nvim_set_hl(0, 'RenderMarkdownH1', {
-                fg = '#f4bf75',
-                bg = '#7a603b',
-                italic = false
-            })
-            vim.api.nvim_set_hl(0, 'RenderMarkdownH1Bg', {
-                fg = '#f4bf75',
-                bg = '#7a603b',
-                italic = false
-            })
-            vim.api.nvim_set_hl(0, 'RenderMarkdownH2', {
-                fg = '#b46958',
-                bg = '#5a352c',
-                italic = false
-            })
-            vim.api.nvim_set_hl(0, 'RenderMarkdownH2Bg', {
-                fg = '#b46958',
-                bg = '#5a352c',
-                italic = false
-            })
-            vim.api.nvim_set_hl(0, 'RenderMarkdownH3', {
-                fg = '#90A959',
-                bg = '#48552d',
-                italic = false
-            })
-            vim.api.nvim_set_hl(0, 'RenderMarkdownH3Bg', {
-                fg = '#90A959',
-                bg = '#48552d',
-                italic = false
-            })
-            vim.api.nvim_set_hl(0, 'RenderMarkdownH4', {
-                fg = '#88afa2',
-                bg = '#445851',
-                italic = false
-            })
-            vim.api.nvim_set_hl(0, 'RenderMarkdownH4Bg', {
-                fg = '#88afa2',
-                bg = '#445851',
-                italic = false
-            })
-            vim.api.nvim_set_hl(0, 'RenderMarkdownH5', {
-                fg = '#7e97ab',
-                bg = '#3f4c56',
-                italic = false
-            })
-            vim.api.nvim_set_hl(0, 'RenderMarkdownH5Bg', {
-                fg = '#7e97ab',
-                bg = '#3f4c56',
-                italic = false
-            })
-            vim.api.nvim_set_hl(0, 'RenderMarkdownH6', {
-                fg = '#AA749F',
-                bg = '#553a50',
-                italic = false
-            })
-            vim.api.nvim_set_hl(0, 'RenderMarkdownH6Bg', {
-                fg = '#AA749F',
-                bg = '#553a50',
-                italic = false
-            })
-            vim.api.nvim_set_hl(0, 'markdownHeadingDelimiter', {
-                fg = '#727272',
-                bg = '#202020',
-                italic = false
-            })
+            -- 2) link markdown groups to theme-aware highlight groups (foreground only)
+            local function link_group(name, target)
+                vim.api.nvim_set_hl(0, name, {link = target})
+            end
 
-            vim.api.nvim_set_hl(0, '@markup.heading.1.markdown', {
-                fg = '#f4bf75',
-                bg = '#7a603b',
-                italic = false
-            }) -- H1
-            vim.api.nvim_set_hl(0, '@markup.heading.2.markdown', {
-                fg = '#b46958',
-                bg = '#5a352c',
-                italic = false
-            }) -- H2
-            vim.api.nvim_set_hl(0, '@markup.heading.3.markdown', {
-                fg = '#90A959',
-                bg = '#48552d',
-                italic = false
-            }) -- H3
-            vim.api.nvim_set_hl(0, '@markup.heading.4.markdown', {
-                fg = '#88afa2',
-                bg = '#445851',
-                italic = false
-            }) -- H4
-            vim.api.nvim_set_hl(0, '@markup.heading.5.markdown', {
-                fg = '#7e97ab',
-                bg = '#3f4c56',
-                italic = false
-            }) -- H5
-            vim.api.nvim_set_hl(0, '@markup.heading.6.markdown', {
-                fg = '#AA749F',
-                bg = '#553a50',
-                italic = false
-            }) -- H6
+            link_group('RenderMarkdownH1', 'markdownH1')
+            link_group('RenderMarkdownH2', 'markdownH2')
+            link_group('RenderMarkdownH3', 'markdownH3')
+            link_group('RenderMarkdownH4', 'markdownH4')
+            link_group('RenderMarkdownH5', 'markdownH5')
+            link_group('RenderMarkdownH6', 'markdownH6')
+
+            link_group('RenderMarkdownH1Bg', 'markdownH1')
+            link_group('RenderMarkdownH2Bg', 'markdownH2')
+            link_group('RenderMarkdownH3Bg', 'markdownH3')
+            link_group('RenderMarkdownH4Bg', 'markdownH4')
+            link_group('RenderMarkdownH5Bg', 'markdownH5')
+            link_group('RenderMarkdownH6Bg', 'markdownH6')
+
+            link_group('markdownHeadingDelimiter', 'markdownHeadingDelimiter')
+
+            link_group('@markup.heading.1.markdown', 'markdownH1') -- H1
+            link_group('@markup.heading.2.markdown', 'markdownH2') -- H2
+            link_group('@markup.heading.3.markdown', 'markdownH3') -- H3
+            link_group('@markup.heading.4.markdown', 'markdownH4') -- H4
+            link_group('@markup.heading.5.markdown', 'markdownH5') -- H5
+            link_group('@markup.heading.6.markdown', 'markdownH6') -- H6
         end
     }
 }

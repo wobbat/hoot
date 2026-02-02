@@ -9,7 +9,7 @@
 :cfg hyprland/cursor.conf -> ~/.config/hypr/theme.conf
 
 @pkg rofi
-:cfg rofi/iceberg -> ~/.config/rofi
+:cfg rofi/cursor -> ~/.config/rofi
 
 @pkgs
 grim
